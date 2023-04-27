@@ -59,8 +59,7 @@ weather = pd.read_sql(query, engine)
 # View the first few rows of data
 print(weather.head())
 
-# this is how you collaboratively use SQL and pandas = you've built a database with freeCodeCamp
-#you manage it with python using SQL and pandas
+# this is how you collaboratively use SQL and pandas; you manage it with python using SQL and pandas
 
 # load libraries 
 import pandas as pd
@@ -152,9 +151,7 @@ wintry_days = pd.read_sql(query, engine)
 # View summary stats about the temperatures
 print(wintry_days.describe())
 
-# matcha ceremonial grade, powdered greens, angelica, korean ginseng, monk fruit, awsagaranda, morinaga
-# if I was a wealthy celebrity/influencer - spend my money on the best doctors, healthcare and treatments, organic and clean eating, 
-# asian dietary standards drinking luxury tea and making things from scratch like bone broth and making juices
+
 
 
 
