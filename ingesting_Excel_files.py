@@ -74,10 +74,6 @@ for key, value in survey_responses.item():
 	print(key, type(value))
 
 
-# FOR GITHUB:put it all together -- README.md This is a data ingestion assignment importing excel files from the DataCamp course Streamlined Data Ingestion with Pandas
-# modifications were made with data cleansing with Excel and then ingesting the workbook thru pandas so TEL (Transform, Extract and Load) 
-#ibraries used: pandas
-
 #create a empty df to hold all loaded sheets 
 all_responses = pd.DataFrame()
 
@@ -158,13 +154,7 @@ plt.show()
 """You compiled similar spreadsheets into one dataset. This method works well when you know 
 your spreadsheets use the same column names. If they don't, you can end up with lots of NA values 
 where column names don't align"""
-# Add this project to github as 
-"""
-Create an empty dataframe, all_responses.
-Set up a for loop to iterate through the values in the responses dictionary.
-Append each dataframe to all_responses and reassign the result to the same variable name
-"""
-# every Datacamp Exercise should be uploaded to your github repos within notebooks
+
 bootcamp_data = pd.read_excel("fcc_survey_booleans.xlsx")
 print(bootcamp_data.dtypes)
 
@@ -201,14 +191,6 @@ bool_data = pd.read_excel("fcc_survey_booleans.xlsx",
                           true_values=["Yes"],
                           false_values=["No"])
 print(bool_data.sum())
-
-# README.md
-# the following contains a string ID column and several True/False columns indicating financial
-# stressors. You'll evaluate which non-ID columns have no NA values and therefore can be set as 
-# Boolean, then tell read_excel() to load them as such with the dtype args**
-
-# count the NA values in each column of survey_data with isna fx & sum fx.
-# HasDebt has zero NAs as well as ID.x
 
 # Load the data
 survey_data = pd.read_excel("fcc_survey_subset.xlsx", 
@@ -322,9 +304,6 @@ survey_data = pd.read_excel("fcc_survey_dts.xlsx",
 # View summary statistics about Part2Start
 print(survey_data.Part2Start.describe())
 
-# things you spend six-figures on like most/least
-# least: clothing, makeup, shoes, cars | most: food, travel, otaku, certain clothes, jewelry, handbags, art, nails
-
 # Parse non-standard date formats
 
 # Parse datetimes and assign result back to Part2EndTime
@@ -333,13 +312,6 @@ survey_data["Part2EndTime"] = pd.to_datetime(survey_data["Part2EndTime"],
 
 # Print first few values of Part2EndTime
 print(survey_data.Part2EndTime.head())
-
-# XPATH 
-# ("collection/movie[popularity < 8]/format/text()") 
-# access the child elements with the XML file 
-
-# to access the other attribute 
-#["collection/movie[@title='Transformers']/@shelf"]
 
 
 
